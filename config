@@ -53,9 +53,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #############################################
 
 # No. 1
-bindcode 191 exec --no-startup-id ~/.config/i3/audio.sh 0
+bindcode 191 exec --no-startup-id ~/.config/i3/audio.sh speackers
 # No. 2
-bindcode 192 exec --no-startup-id ~/.config/i3/audio.sh 1
+bindcode 192 exec --no-startup-id ~/.config/i3/audio.sh headset
 # No. 3
 bindcode 193 exec --no-startup-id firefox
 # No. 4
@@ -78,8 +78,8 @@ bindcode 199 exec --no-startup-id blurlock
 bindsym $mod+Shift+a mode "$mode_audio"
 set $mode_audio Set audio output Speackers(1) Headset(2)
 mode "$mode_audio" {
-    bindsym 1 exec --no-startup-id ~/.config/i3/audio.sh 0
-    bindsym 2 exec --no-startup-id ~/.config/i3/audio.sh 1
+    bindsym 1 exec --no-startup-id ~/.config/i3/audio.sh speackers, mode "default"
+    bindsym 2 exec --no-startup-id ~/.config/i3/audio.sh headset, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
